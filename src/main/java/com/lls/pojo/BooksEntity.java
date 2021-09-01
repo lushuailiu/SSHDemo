@@ -3,8 +3,11 @@ package com.lls.pojo;
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * @author lushuai
+ */
 @Entity
-@Table(name = "books", schema = "hibernate", catalog = "")
+@Table(name = "books", schema = "hibernate")
 public class BooksEntity {
     private int bookId;
     private String bookName;

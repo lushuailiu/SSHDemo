@@ -3,8 +3,11 @@ package com.lls.pojo;
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * @author lushuai
+ */
 @Entity
-@Table(name = "user", schema = "hibernate", catalog = "")
+@Table(name = "user", schema = "hibernate")
 public class UserEntity {
     private int id;
     private String username;
@@ -51,5 +54,14 @@ public class UserEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, username, password);
+    }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
